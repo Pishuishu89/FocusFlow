@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "FocusFlow",
+    "version": "1.0",
+    "description": "A minimalist Pomodoro timer that keeps you focused by redirecting distractions.",
+    "permissions": [
+      "storage",
+      "notifications",
+      "declarativeNetRequest",
+      "declarativeNetRequestWithHostAccess"
+    ],
+    "host_permissions": ["<all_urls>"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": "icon128.png"
+    },
+    "options_page": "settings.html",
+    "web_accessible_resources": [
+      {
+        "resources": ["stayfocused.html"],
+        "matches": ["<all_urls>"]
+      }
+    ]
+  }
+  
